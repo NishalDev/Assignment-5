@@ -1,0 +1,25 @@
+<div class="css">
+<button class="retrieve-button" (click)="getUser()">Retrieve User</button>
+<ng-container *ngIf="Data !== null">
+    <div>  
+      <button (click)="autoFill()">Auto Fill</button>
+    </div>
+</ng-container>
+<div >
+    <form [formGroup]="retrievedUserForm" (submit)="onSubmit($event)">
+        <div class="form">
+        <input type="image" name="photo" [src]="retrievedUserForm.get('photo')?.value" formControlName="photo"><br>
+        <label for="photo">Photo</label><br><br>
+        <label for="name">Name</label> <input type="text" name="name" formControlName="name" class="form-input"><br>
+        <label for="email">Email</label> <input type="text" name="email" formControlName="email" class="form-input"><br>
+        <label for="gender" >Gender</label> <input type="text" name="gender" formControlName="gender" class="form-input"><br>
+        <label for="phone">Phone Number</label> <input type="text" name="phone" formControlName="phone" class="form-input"><br>
+        <label for="city">City:</label> <input type="text" name="city" formControlName="city" class="form-input"><br>
+        <label for="country">Country:</label> <input type="text" name="country" formControlName="country" class="form-input"><br>
+        <button type="submit" [disabled]="!retrievedUserForm.valid" class="submit-button" (click)="submitForm()">Submit</button>
+        <button (click)="clear()">Clear Form</button>
+        </div>
+      </form>
+    <h1>{{message}}</h1>
+</div>
+</div>

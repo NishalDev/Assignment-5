@@ -1,0 +1,16 @@
+.css {
+    padding: 10px 20px;
+    background-color: #0b3c2e;
+    color: white;
+    align-self: center;
+    border: none;
+    cursor: pointer;
+  }
+.form{
+    padding: 10px 20px;
+    background-color: #ebe89a;
+    color: rgb(0, 0, 0);
+    align-self: center;
+    border: none;
+    cursor: pointer;
+}
